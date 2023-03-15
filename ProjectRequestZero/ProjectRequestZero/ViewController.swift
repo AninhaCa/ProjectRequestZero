@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet var myTableView: UITableView!
     
+    var arreyPizza: Pizza?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -24,14 +26,16 @@ class ViewController: UIViewController {
 
     func requestPizza() {
         AF.request("https://p3teufi0k9.execute-api.us-east-1.amazonaws.com/v1/pizza", method: .get).response { response in
-            debugPrint(response)
+            
+            let pizza = try? JSONDecoder().decode(Pizza.self, from: response.data ?? Data())
+            self.arreyPizza = pizza
         }
     }
 }
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return arreyPizza?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
