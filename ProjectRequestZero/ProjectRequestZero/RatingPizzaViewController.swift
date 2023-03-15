@@ -27,10 +27,15 @@ class RatingPizzaViewController: UIViewController {
     }
 
     @IBAction func back(_ sender: Any) {
+        buttonBack.backgroundColor = .red
         self.navigationController?.popViewController(animated: true)
+        
     }
     
     @IBAction func blackPlay(_ sender: Any) {
-        
+        if let modal = self.storyboard?.instantiateViewController(identifier: "modal") {
+            buttonFollow.backgroundColor = .red
+            self.present(modal, animated: true)
+        }
     }
 }

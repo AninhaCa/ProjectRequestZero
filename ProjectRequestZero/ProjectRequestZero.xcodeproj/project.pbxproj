@@ -16,6 +16,7 @@
 		775FD75129C139B8007F377A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 775FD74F29C139B8007F377A /* LaunchScreen.storyboard */; };
 		778ABAD129C26C2500D40D5A /* PricePizzaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778ABAD029C26C2500D40D5A /* PricePizzaViewController.swift */; };
 		778AD77E29C27BD800875A0D /* RatingPizzaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778AD77D29C27BD800875A0D /* RatingPizzaViewController.swift */; };
+		778AD78029C2837700875A0D /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778AD77F29C2837700875A0D /* ModalViewController.swift */; };
 		778DFA0729C141F100256D44 /* MyCustomCellXIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778DFA0529C141F100256D44 /* MyCustomCellXIB.swift */; };
 		778DFA0829C141F100256D44 /* MyCustomCellXIB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 778DFA0629C141F100256D44 /* MyCustomCellXIB.xib */; };
 		778DFA0A29C1518300256D44 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778DFA0929C1518300256D44 /* Pizza.swift */; };
@@ -32,6 +33,7 @@
 		775FD75229C139B8007F377A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		778ABAD029C26C2500D40D5A /* PricePizzaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePizzaViewController.swift; sourceTree = "<group>"; };
 		778AD77D29C27BD800875A0D /* RatingPizzaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingPizzaViewController.swift; sourceTree = "<group>"; };
+		778AD77F29C2837700875A0D /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		778DFA0529C141F100256D44 /* MyCustomCellXIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomCellXIB.swift; sourceTree = "<group>"; };
 		778DFA0629C141F100256D44 /* MyCustomCellXIB.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCustomCellXIB.xib; sourceTree = "<group>"; };
 		778DFA0929C1518300256D44 /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				775FD74829C139B7007F377A /* ViewController.swift */,
 				778ABAD029C26C2500D40D5A /* PricePizzaViewController.swift */,
 				778AD77D29C27BD800875A0D /* RatingPizzaViewController.swift */,
+				778AD77F29C2837700875A0D /* ModalViewController.swift */,
 				778DFA0929C1518300256D44 /* Pizza.swift */,
 				778DFA0529C141F100256D44 /* MyCustomCellXIB.swift */,
 				778DFA0629C141F100256D44 /* MyCustomCellXIB.xib */,
@@ -221,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				778AD78029C2837700875A0D /* ModalViewController.swift in Sources */,
 				778DFA0729C141F100256D44 /* MyCustomCellXIB.swift in Sources */,
 				775FD74929C139B7007F377A /* ViewController.swift in Sources */,
 				778AD77E29C27BD800875A0D /* RatingPizzaViewController.swift in Sources */,
