@@ -21,6 +21,7 @@ class ViewController: UIViewController {
 
     func setupTableView() {
         myTableView.dataSource = self
+        myTableView.register(UINib(nibName: "MyCustomCellXIB", bundle: nil), forCellReuseIdentifier: "cellXIB")
         requestPizza()
     }
 
@@ -29,6 +30,7 @@ class ViewController: UIViewController {
             
             let pizza = try? JSONDecoder().decode(Pizza.self, from: response.data ?? Data())
             self.arreyPizza = pizza
+            self.myTableView.reloadData()
         }
     }
 }
@@ -41,6 +43,7 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cellXIB", for: indexPath) as? MyCustomCellXIB {
             
+            cell.setupXIB(pizzaElement: self.arreyPizza?[indexPath.row])
              return cell
         }
         

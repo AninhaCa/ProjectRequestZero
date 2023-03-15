@@ -7,5 +7,5 @@ target 'ProjectRequestZero' do
 
   # Pods for ProjectRequestZero
 pod 'Alamofire'
-pod 'SDWebImage', '5.13.6'
+pod 'SDWebImage', '5.12.6'
 end

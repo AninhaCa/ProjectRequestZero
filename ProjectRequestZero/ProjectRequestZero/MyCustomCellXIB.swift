@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MyCustomCellXIB: UITableViewCell {
 
@@ -23,4 +24,10 @@ class MyCustomCellXIB: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setupXIB(pizzaElement: PizzaElement?) {
+        labelPizza.text = pizzaElement?.name ?? ""
+        
+        let urlImage = URL(string: pizzaElement?.imageURL ?? "")
+        imagePizza.sd_setImage(with: urlImage)
+    }
 }
