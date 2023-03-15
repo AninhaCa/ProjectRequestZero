@@ -6,24 +6,42 @@
 //
 
 import UIKit
+import SDWebImage
 
-class TwoViewController: UIViewController {
+class PricePizzaViewController: UIViewController {
 
+    @IBOutlet var imagePrice: UIImageView!
+    @IBOutlet var labelName: UILabel!
+    @IBOutlet var labelPriceP: UILabel!
+    @IBOutlet var labelPriceM: UILabel!
+    @IBOutlet var labelPriceG: UILabel!
+    @IBOutlet var buttonBack: UIButton!
+    @IBOutlet var buttonFollow: UIButton!
+    
+    var pizzaPrice = PizzaElement(id: "", name: "", imageURL: "", rating: 0, priceP: 0, priceM: 0, priceG: 0)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        labelName.text = pizzaPrice.name
+        labelPriceP.text = "PEQUENA - R$\(pizzaPrice.priceP ?? 0)"
+        labelPriceM.text = "MÉDIA - R$\(pizzaPrice.priceM ?? 0)"
+        labelPriceG.text = "GRANDE - R$\(pizzaPrice.priceG ?? 0)"
+        let urlImage = URL(string: pizzaPrice.imageURL ?? "")
+        imagePrice.sd_setImage(with: urlImage)
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func back(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
-    */
-
+    
+    @IBAction func follow(_ sender: Any) {
+        if let rating = self.storyboard?.instantiateViewController(identifier: "rating") as? RatingPizzaViewController {
+            
+            rating.pizzaRating = pizzaPrice.self
+            
+            self.navigationController?.pushViewController(rating, animated: true)
+    }
+}
 }
