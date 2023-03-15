@@ -9,7 +9,7 @@ import UIKit
 import SDWebImage
 
 class RatingPizzaViewController: UIViewController {
-
+    
     @IBOutlet var labelRating: UILabel!
     @IBOutlet var labelName: UILabel!
     @IBOutlet var imageRating: UIImageView!
@@ -25,7 +25,7 @@ class RatingPizzaViewController: UIViewController {
         labelName.text = "AVALIAÇÃO"
         labelRating.text = "Para Nossos Clientes, a pizza \(pizzaRating.name ?? "") esta na posição - \(pizzaRating.rating ?? 0)/5 - de aprovaçao"
     }
-
+    
     @IBAction func back(_ sender: Any) {
         buttonBack.backgroundColor = .red
         self.navigationController?.popViewController(animated: true)
