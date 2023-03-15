@@ -16,6 +16,7 @@
 		775FD75129C139B8007F377A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 775FD74F29C139B8007F377A /* LaunchScreen.storyboard */; };
 		778DFA0729C141F100256D44 /* MyCustomCellXIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778DFA0529C141F100256D44 /* MyCustomCellXIB.swift */; };
 		778DFA0829C141F100256D44 /* MyCustomCellXIB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 778DFA0629C141F100256D44 /* MyCustomCellXIB.xib */; };
+		778DFA0A29C1518300256D44 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778DFA0929C1518300256D44 /* Pizza.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		775FD75229C139B8007F377A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		778DFA0529C141F100256D44 /* MyCustomCellXIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomCellXIB.swift; sourceTree = "<group>"; };
 		778DFA0629C141F100256D44 /* MyCustomCellXIB.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCustomCellXIB.xib; sourceTree = "<group>"; };
+		778DFA0929C1518300256D44 /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
 		7F4B352983C5266EEA222A7C /* Pods_ProjectRequestZero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectRequestZero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C84182B5C2B2679288936106 /* Pods-ProjectRequestZero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectRequestZero.release.xcconfig"; path = "Target Support Files/Pods-ProjectRequestZero/Pods-ProjectRequestZero.release.xcconfig"; sourceTree = "<group>"; };
 		F87129CB1625C1C996060AD2 /* Pods-ProjectRequestZero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectRequestZero.debug.xcconfig"; path = "Target Support Files/Pods-ProjectRequestZero/Pods-ProjectRequestZero.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				775FD74429C139B7007F377A /* AppDelegate.swift */,
 				775FD74629C139B7007F377A /* SceneDelegate.swift */,
 				775FD74829C139B7007F377A /* ViewController.swift */,
+				778DFA0929C1518300256D44 /* Pizza.swift */,
 				778DFA0529C141F100256D44 /* MyCustomCellXIB.swift */,
 				778DFA0629C141F100256D44 /* MyCustomCellXIB.xib */,
 				775FD74A29C139B7007F377A /* Main.storyboard */,
@@ -215,6 +218,7 @@
 				778DFA0729C141F100256D44 /* MyCustomCellXIB.swift in Sources */,
 				775FD74929C139B7007F377A /* ViewController.swift in Sources */,
 				775FD74529C139B7007F377A /* AppDelegate.swift in Sources */,
+				778DFA0A29C1518300256D44 /* Pizza.swift in Sources */,
 				775FD74729C139B7007F377A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
