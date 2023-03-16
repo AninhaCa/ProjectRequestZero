@@ -18,15 +18,15 @@ class PricePizzaViewController: UIViewController {
     @IBOutlet var buttonBack: UIButton!
     @IBOutlet var buttonFollow: UIButton!
     
-    var pizzaPrice = PizzaElement(id: "", name: "", imageURL: "", rating: 0, priceP: 0, priceM: 0, priceG: 0)
+    var pizzaPrice: PizzaElement?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        labelName.text = pizzaPrice.name
-        labelPriceP.text = "PEQUENA - R$\(pizzaPrice.priceP ?? 0)"
-        labelPriceM.text = "MÉDIA - R$\(pizzaPrice.priceM ?? 0)"
-        labelPriceG.text = "GRANDE - R$\(pizzaPrice.priceG ?? 0)"
-        let urlImage = URL(string: pizzaPrice.imageURL ?? "")
+        labelName.text = pizzaPrice?.name ?? ""
+        labelPriceP.text = "PEQUENA - R$\(pizzaPrice?.priceP ?? 0)"
+        labelPriceM.text = "MÉDIA - R$\(pizzaPrice?.priceM ?? 0)"
+        labelPriceG.text = "GRANDE - R$\(pizzaPrice?.priceG ?? 0)"
+        let urlImage = URL(string: pizzaPrice?.imageURL ?? "")
         imagePrice.sd_setImage(with: urlImage)
     }
     
@@ -38,7 +38,7 @@ class PricePizzaViewController: UIViewController {
     
     @IBAction func follow(_ sender: Any) {
         if let rating = self.storyboard?.instantiateViewController(identifier: "rating") as? RatingPizzaViewController {
-            rating.pizzaRating = pizzaPrice.self
+            rating.pizzaRating = pizzaPrice
             buttonFollow.backgroundColor = .red
             self.navigationController?.pushViewController(rating, animated: true)
         }

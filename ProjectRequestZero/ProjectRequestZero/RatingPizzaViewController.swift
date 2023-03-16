@@ -16,14 +16,14 @@ class RatingPizzaViewController: UIViewController {
     @IBOutlet var buttonBack: UIButton!
     @IBOutlet var buttonFollow: UIButton!
     
-    var pizzaRating = PizzaElement(id: "", name: "", imageURL: "", rating: 0, priceP: 0, priceM: 0, priceG: 0)
+    var pizzaRating: PizzaElement?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let urlImage = URL(string: pizzaRating.imageURL ?? "")
+        let urlImage = URL(string: pizzaRating?.imageURL ?? "")
         imageRating.sd_setImage(with: urlImage)
         labelName.text = "AVALIAÇÃO"
-        labelRating.text = "Para Nossos Clientes, a pizza \(pizzaRating.name ?? "") esta na posição - \(pizzaRating.rating ?? 0)/5 - de aprovaçao"
+        labelRating.text = "Para Nossos Clientes, a pizza \(pizzaRating?.name ?? "") esta na posição - \(pizzaRating?.rating ?? 0)/5 - de aprovaçao"
     }
     
     @IBAction func back(_ sender: Any) {
@@ -33,9 +33,7 @@ class RatingPizzaViewController: UIViewController {
     }
     
     @IBAction func blackPlay(_ sender: Any) {
-        if let modal = self.storyboard?.instantiateViewController(identifier: "modal") {
             buttonFollow.backgroundColor = .red
-            self.present(modal, animated: true)
+            self.navigationController?.popToRootViewController(animated: true)
         }
     }
-}
